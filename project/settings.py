@@ -8,24 +8,24 @@ env.read_env()
 
 DATABASES = {
     'default': {
-        'ENGINE': env("DB_ENGINE"),
-        'HOST': env("DB_HOST"),
-        'PORT': env("DB_PORT"),
-        'NAME': env("DB_NAME"),
-        'USER': env("DB_USER"),
-        'PASSWORD': env("DB_PASSWORD"),
+        'ENGINE': env.str('DB_ENGINE'),
+        'HOST': env.str('DB_HOST'),
+        'PORT': env.int('DB_PORT'),
+        'NAME': env.str('DB_NAME'),
+        'USER': env.str('DB_USER'),
+        'PASSWORD': env.str('DB_PASSWORD'),
     }
 }
 
 INSTALLED_APPS = ['datacenter']
 
-SECRET_KEY = env("SECRET_KEY")
+SECRET_KEY = env.str('SECRET_KEY')
 
 DEBUG = False
 
 ROOT_URLCONF = 'project.urls'
 
-ALLOWED_HOSTS = [env("ALLOWED_HOSTS")]
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATES = [
