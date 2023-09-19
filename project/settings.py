@@ -21,7 +21,7 @@ INSTALLED_APPS = ['datacenter']
 
 SECRET_KEY = env("SECRET_KEY")
 
-DEBUG = env.bool("ENV_FALSE", "")
+DEBUG = False
 
 ROOT_URLCONF = 'project.urls'
 
