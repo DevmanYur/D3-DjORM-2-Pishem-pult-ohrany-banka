@@ -23,6 +23,7 @@
 > DB_PASSWORD
 > >
 >>>Другие переменные\
+> DEBUG_FALSE\
 > SECRET_KEY\
 > ALLOWED_HOSTS
 
